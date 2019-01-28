@@ -43,6 +43,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 ///////////////////    ANCHORS   /////////////////
+const navBar = document.querySelector('nav');
 let anchor = document.querySelectorAll('a');
 anchor[0].textContent = siteContent['nav']['nav-item-1'];
 anchor[1].textContent = siteContent['nav']['nav-item-2'];
@@ -50,7 +51,18 @@ anchor[2].textContent = siteContent['nav']['nav-item-3'];
 anchor[3].textContent = siteContent['nav']['nav-item-4'];
 anchor[4].textContent = siteContent['nav']['nav-item-5'];
 anchor[5].textContent = siteContent['nav']['nav-item-6'];
+anchor.forEach(element => {element.style.color = 'green'});
 
+
+let newAnchorTag1 = document.createElement('a');
+newAnchorTag1.textContent = 'Lightbulb';
+newAnchorTag1.style.color = 'green';
+navBar.appendChild(newAnchorTag1);
+
+let newAnchorTag2 = document.createElement('a');
+newAnchorTag2.textContent = 'Home';
+newAnchorTag2.style.color = 'green';
+navBar.prepend(newAnchorTag2);
 
  ///////////////////    HEADER/CTA   /////////////////
 ///////////////////    TITLE   /////////////////

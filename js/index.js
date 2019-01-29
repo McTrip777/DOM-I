@@ -37,6 +37,71 @@ const siteContent = {
   },
 };
 
+///////////////////    NAV   /////////////////
+///////////////////    IMAGE   /////////////////
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+///////////////////    ANCHORS   /////////////////
+let anchor = document.querySelectorAll('a');
+anchor[0].textContent = siteContent['nav']['nav-item-1'];
+anchor[1].textContent = siteContent['nav']['nav-item-2'];
+anchor[2].textContent = siteContent['nav']['nav-item-3'];
+anchor[3].textContent = siteContent['nav']['nav-item-4'];
+anchor[4].textContent = siteContent['nav']['nav-item-5'];
+anchor[5].textContent = siteContent['nav']['nav-item-6'];
+anchor.forEach(element => {element.style.color = 'green'});
+///////////////////    NEW TAGS   /////////////////
+const navBar = document.querySelector('nav');
+let newAnchorTag1 = document.createElement('a');
+    newAnchorTag1.textContent = 'Lightbulb';
+    newAnchorTag1.style.color = 'green';
+    navBar.appendChild(newAnchorTag1);
+let newAnchorTag2 = document.createElement('a');
+    newAnchorTag2.textContent = 'Home';
+    newAnchorTag2.style.color = 'green';
+    navBar.prepend(newAnchorTag2);
+
+ ///////////////////    HEADER/CTA   /////////////////
+///////////////////    TITLE   /////////////////
+let titleDom = document.querySelector('h1');
+titleDom.innerHTML = 'DOM<br>is<br> Awesome';
+///////////////////    BUTTON   /////////////////
+let btn = document.querySelector('button');
+btn.textContent = siteContent['cta']['button'];
+///////////////////    IMAGE   /////////////////
+let logoCircle = document.getElementById("cta-img");
+logoCircle.setAttribute('src', siteContent.cta["img-src"])
+
+
+///////////////////    MAIN-CONTENT   /////////////////
+///////////////////    IMAGE   /////////////////
+let midImage = document.getElementById("middle-img");
+midImage.setAttribute('src', siteContent['main-content']["middle-img-src"]);
+///////////////////    BODY-TITLES   /////////////////
+let bodyT = document.querySelectorAll('h4');
+bodyT[0].textContent = siteContent['main-content']['features-h4'];
+bodyT[1].textContent = siteContent['main-content']['about-h4'];
+bodyT[2].textContent = siteContent['main-content']['services-h4'];
+bodyT[3].textContent = siteContent['main-content']['product-h4'];
+bodyT[4].textContent = siteContent['main-content']['vision-h4'];
+///////////////////    BODY-PARAGRAPHS   /////////////////
+let bodyP = document.querySelectorAll('p');
+bodyP[0].textContent = siteContent['main-content']['features-content'];
+bodyP[1].textContent = siteContent['main-content']['about-content'];
+bodyP[2].textContent = siteContent['main-content']['services-content'];
+bodyP[3].textContent = siteContent['main-content']['product-content'];
+bodyP[4].textContent = siteContent['main-content']['vision-content'];
+
+
+///////////////////    CONTACT   /////////////////
+bodyT[5].textContent = siteContent['contact']['contact-h4'];
+bodyP[5].innerHTML = '123 Way 456 Street <br> Somewhere, USA';
+bodyP[6].textContent = siteContent['contact']['phone'];
+bodyP[7].textContent = siteContent['contact']['email'];
+
+///////////////////    FOOTER   /////////////////
+bodyP[8].textContent = siteContent['footer']['copyright'];
+
+
+
